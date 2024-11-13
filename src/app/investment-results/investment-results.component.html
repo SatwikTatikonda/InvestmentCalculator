@@ -23,22 +23,23 @@
 
     <tbody>
 
-        @for(result of results; track result.year){
+        @for(result of results(); track result.year){
+            
 
             <tr>
                 <td>
                     {{result.year}}
                 </td>
                 <td>
-                    {{result.valueEndOfYear}}
+                    {{result.valueEndOfYear | currency}}
                 </td>
                 <td>
-                    {{result.interest}}
+                    {{result.interest | currency}}
                 </td>
                 <td>
-                    {{result.totalAmountInvested}}
+                    {{result.totalAmountInvested | currency}}
                 </td>
-                
+
             </tr>
 
         }
